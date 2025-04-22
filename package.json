@@ -1,5 +1,5 @@
 {
-  "name": "progressbar",
+  "name": "@sscharfenberg/progressbar",
   "version": "0.1.0",
   "type": "module",
   "description": "Simple, accessible progressbar to visualize request status",
