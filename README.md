@@ -6,7 +6,7 @@ A simple, lightweight and accessible progressbar to visualize request status. Ba
 
 First, import the needed functions:
 
-```
+```Javascript
 import { 
     doesProgressBarExist, 
     finishProgress, 
@@ -25,7 +25,7 @@ When the request is finished, call `finishProgress()`
 
 In your application entrypoint (usually `app.js`):
 
-```
+```Javascript
 import { createInertiaApp, router } from "@inertiajs/vue3";
 import { 
     doesProgressBarExist, 
@@ -35,7 +35,7 @@ import {
 } from "@sscharfenberg/progressbar";
 ```
 
-```
+```Javascript
 /**
  * @function on router start
  */
@@ -73,8 +73,8 @@ You need to import/add the CSS needed for the progressbar. The javascript does n
 
 ### Using progressbar default styles
 
-```
-import "progressbar/progressbar.css";
+```Javascript
+import "@sscharfenberg/progressbar/progressbar.css";
 ```
 
 ### Using your own styles
