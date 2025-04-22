@@ -1,0 +1,54 @@
+/********************************************************************************
+ * progressbar styles
+ * feel free to change or replace to adapt for the needed branding.
+ *
+ * this CSS needs a color scheme set, either as meta tag or as CSS property on :root
+ * :root {
+ *     color-scheme: light dark;
+ * }
+ * without it, the light-dark function won't work correctly.
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+ *******************************************************************************/
+
+.progressbar {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1500;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 16px;
+
+    padding: 2px;
+    border: none;
+
+    background: light-dark(rgba(237,237,237,.75),rgba(27,26,26,.95));
+    box-shadow: 3px 3px 5px 2px light-dark(rgba(0,0,0,.07),rgba(255,255,255,.07));
+}
+
+.progressbar__bar {
+        --bar-percentage: 10%;
+
+        position: relative;
+
+        width: var(--bar-percentage);
+        height: 100%;
+
+        background: #006dc9 linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-size: 40px 40px;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 0 2px 3px light-dark(rgba(0,0,0,.37),rgba(255,255,255,.37));
+
+        animation: progress-bar-stripes 4s linear infinite;
+        transition: width .15s linear;
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}

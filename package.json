@@ -1,0 +1,48 @@
+{
+  "name": "progressbar",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple, accessible progressbar to visualize request status",
+  "main": "progressbar.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prettier": "prettier --write \"**/*.{js,vue,scss}\""
+  },
+  "keywords": [
+    "progress",
+    "progressbar"
+  ],
+  "author": "Sven Scharfenberg <sscharfenberg@ivugmbh.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "rollup": "^2.79.2",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "engines": {
+    "node": "^22.14.0",
+    "npm": "^10.9.2"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "singleAttributePerLine": false,
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ],
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "overrides": [
+      {
+        "files": "**/*.yml",
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  }
+}
