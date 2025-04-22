@@ -71,3 +71,68 @@ router.on("finish", event => {
 
 You need to import/add the CSS needed for the progressbar. The javascript does not contain the CSS styles.
 
+### Using progressbar default styles
+
+```
+import "progressbar/progressbar.css";
+```
+
+### Using your own styles
+
+Feel free to copy the css contents into your own scss/css files, change everything or create completely new styles.
+
+## Options
+
+You can supply an object for the startProgress function with option properties.
+
+### `debug`: false
+
+Whether to output debug information into the browsers console. `false` does not output anything.
+
+### `trickle`: true
+
+Whether to use the automatic incrementing of the progressbar to give the illusion that something is happening - even if it is just waiting for the server to answer.
+
+### `trickleSpeed`: 800
+
+The duration in ms between each trickle increments.
+
+### `trickleRate`: 0.02
+
+Math.random * trickleRate is the increment for trickling.
+
+### `startingValue`: 0.1
+
+The starting value for the progressbar.
+
+### `parent`: "main"
+
+The queryselector where the progressbar will be appended to. For accessibility reasons, this should be within a landmark.
+
+### `barSelector`: ".progressbar__bar"
+
+The queryselector inside the progressbar of the bar itself that changes the width.
+
+### `ariaLabel`: "Loading progress"
+
+I18N aria-label for the progressbar.
+
+### `minValue`: 0.1
+
+Min value for clamp function.
+
+### `maxValue`: 0.994
+
+Max value for clamp function.
+
+### `template`: 
+
+The HTML template for the progressbar. Default:
+```
+<div id="progressbar" class="progressbar" role="progressbar" aria-label="" aria-valuemin="0" aria-valuemax="100" aria-valuenow="">
+    <div class="progressbar__bar"></div>
+</div>
+```
+The `id=progressbar role="progressbar"` is needed for the progressbar to function correctly. `class="progressbar"` is needed for the styling, but can be changed without changing the Javascript.
+
+The aria attributes should be kept on the outer element, `aria-valuenow` is updated when the progressbar is updated.

@@ -1,9 +1,14 @@
 {
   "name": "progressbar",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Simple, accessible progressbar to visualize request status",
-  "main": "progressbar.js",
+  "homepage": "https://github.com/sscharfenberg/progressbar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sscharfenberg/progressbar.git"
+  },
+  "browser": "progressbar.js",
   "scripts": {
     "build": "rollup -c",
     "prettier": "prettier --write \"**/*.{js,vue,scss}\""
@@ -12,7 +17,11 @@
     "progress",
     "progressbar"
   ],
-  "author": "Sven Scharfenberg <sscharfenberg@ivugmbh.de>",
+  "author": {
+    "name": "Sven Scharfenberg",
+    "email": "sscharfenberg@ivugmbh.de",
+    "url": "https://github.com/sscharfenberg"
+  },
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.5.3",
