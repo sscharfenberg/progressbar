@@ -1,6 +1,6 @@
 # progressbar
 
-A simple, lightweight and accessible progressbar to visualize request status. Based on [nprogress](https://github.com/rstacruz/nprogress), rewritten as modern ESM without jQuery dependency, with added accessibility.
+A simple, lightweight and accessible progressbar to visualize request status for XHR requests. Based on [@rstacruz](https://github.com/rstacruz)s [nprogress](https://github.com/rstacruz/nprogress), rewritten as modern ESM without jQuery dependency, with added accessibility.
 
 ## Usage
 
@@ -67,6 +67,8 @@ router.on("finish", event => {
 });
 ```
 
+While `progressbar` was developed and tested for `InertiaJS`, it should work - as the precursor `nprogress` - with other Ajax link libraries like Turbolinks or Pjax.
+
 ## CSS
 
 You need to import/add the CSS needed for the progressbar. The javascript does not contain the CSS styles.
@@ -128,7 +130,7 @@ Max value for clamp function.
 ### `template`: 
 
 The HTML template for the progressbar. Default:
-```
+```HTML
 <div id="progressbar" class="progressbar" role="progressbar" aria-label="" aria-valuemin="0" aria-valuemax="100" aria-valuenow="">
     <div class="progressbar__bar"></div>
 </div>
