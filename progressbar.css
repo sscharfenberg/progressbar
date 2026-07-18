@@ -22,25 +22,35 @@
     padding: 2px;
     border: none;
 
-    background: light-dark(rgba(237,237,237,.75),rgba(27,26,26,.95));
-    box-shadow: 3px 3px 5px 2px light-dark(rgba(0,0,0,.07),rgba(255,255,255,.07));
+    background: light-dark(rgba(237, 237, 237, 0.75), rgba(27, 26, 26, 0.95));
+    box-shadow: 3px 3px 5px 2px light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.07));
 }
 
 .progressbar__bar {
-        --bar-percentage: 10%;
+    --bar-percentage: 10%;
 
-        position: relative;
+    position: relative;
 
-        width: var(--bar-percentage);
-        height: 100%;
+    width: var(--bar-percentage);
+    height: 100%;
 
-        background: #006dc9 linear-gradient(135deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-        background-size: 40px 40px;
-        border-radius: 0 5px 5px 0;
-        box-shadow: 0 2px 3px light-dark(rgba(0,0,0,.37),rgba(255,255,255,.37));
+    background: #006dc9
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 40px 40px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 3px light-dark(rgba(0, 0, 0, 0.37), rgba(255, 255, 255, 0.37));
 
-        animation: progress-bar-stripes 4s linear infinite;
-        transition: width .15s linear;
+    animation: progress-bar-stripes 4s linear infinite;
+    transition: width 0.15s linear;
 }
 
 @keyframes progress-bar-stripes {
