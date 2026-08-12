@@ -1,0 +1,11 @@
+# Line endings are decided HERE, not by each contributor's git config.
+#
+# `.editorconfig` already asks EDITORS for LF; this asks GIT for it, which is the half
+# that was missing. A clone with `core.autocrlf=true` — the Windows default, and easy to
+# end up with anywhere — rewrites LF to CRLF on every checkout, so a file keeps coming
+# back with endings nobody chose: `prettier --check` then reports the whole file as
+# unformatted, and a `git stash` round-trip is enough to undo a `prettier --write`.
+# README.md had drifted that way and was the only CRLF file in the repo.
+#
+# `text=auto` lets git detect binary content for itself, so `*` is safe as a blanket rule.
+* text=auto eol=lf
